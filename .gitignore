@@ -1,0 +1,63 @@
+# Environnement virtuel
+.venv/
+venv/
+env/
+ENV/
+
+# Fichiers de configuration Jupyter
+.ipynb_checkpoints/
+.jupyter/
+
+# Sorties temporaires de Jupyter
+*.nbconvert.ipynb
+*.nbconvert/
+*.checkpoint.ipynb
+
+# Fichiers Python compilés
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Fichiers de logs
+*.log
+
+# Fichiers de cache et temporaires
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Fichiers générés
+*.out
+*.err
+
+# Notebooks convertis en autres formats
+*.html
+*.pdf
+*.md
+
+# Données volumineuses (à adapter selon ton projet)
+data/
+datasets/
+database/
+*.csv
+*.tsv
+*.json
+*.xlsx
+*.parquet
+*.h5
+*.pkl
+
+# Dossiers d’expérimentation ou de résultats
+outputs/
+results/
+plots/
+figures/
+
+# Configurations locales d’IDE
+.vscode/
+.idea/
+.spyproject/
+
+desktop.ini
