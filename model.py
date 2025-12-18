@@ -45,10 +45,9 @@ def train_models():
             ("preprocess", preprocess),
             ("regressor", XGBRegressor(
                 n_estimators=500,
-                learning_rate=0.05,
-                max_depth=5,
+                learning_rate=0.01,
+                max_depth=6,
                 subsample=0.8,
-                colsample_bytree=0.8,
                 eval_metric="mae"
             ))
         ])
