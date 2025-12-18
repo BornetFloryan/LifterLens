@@ -1,8 +1,9 @@
 pandas
-scikit-learn
+scikit-learn<1.6
 xgboost
 streamlit
 requests
 python-dotenv
 matplotlib
 seaborn
+catboost
