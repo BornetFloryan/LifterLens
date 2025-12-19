@@ -22,14 +22,22 @@ Ce projet vise à démontrer la mise en œuvre complète d’un pipeline IA :
 
 ### Source
 
-Les données proviennent de la base **OpenPowerlifting**, qui regroupe plusieurs millions de performances réelles issues de compétitions officielles.
+Les données proviennent de la base **OpenPowerliftingg**, qui regroupe plusieurs millions de performances réelles issues de compétitions officielles.
 
-🔗 **Lien de téléchargement des données** :  
-[Powerlifting Database](https://www.kaggle.com/datasets/open-powerlifting/powerlifting-database)
+🔗 Lien de téléchargement des données :
+[Powerlifting Database - Kaggle](https://www.kaggle.com/datasets/open-powerlifting/powerlifting-database)
 
 Dans ce projet, le fichier utilisé est :
-openpowerlifting-2024-01-06-4c732975.csv
+database/openpowerlifting-2024-01-06-4c732975.csv
 
+Le code charge explicitement le fichier depuis le dossier database/ :
+
+```
+df = pd.read_csv(
+    "database/openpowerlifting-2024-01-06-4c732975.csv",
+    low_memory=False
+)
+```
 
 ---
 
@@ -116,3 +124,4 @@ Une interface **Streamlit** permet à l’utilisateur de :
 
 [Floryan BORNET](https://github.com/BornetFloryan) 
 [Corentin BRENDLÉ](https://github.com/BrendleCorentin)
+
