@@ -22,7 +22,7 @@ Ce projet vise à démontrer la mise en œuvre complète d’un pipeline IA :
 
 ### Source
 
-Les données proviennent de la base **OpenPowerliftingg**, qui regroupe plusieurs millions de performances réelles issues de compétitions officielles.
+Les données proviennent de la base **OpenPowerlifting**, qui regroupe plusieurs millions de performances réelles issues de compétitions officielles.
 
 🔗 Lien de téléchargement des données :
 [Powerlifting Database - Kaggle](https://www.kaggle.com/datasets/open-powerlifting/powerlifting-database)
@@ -32,7 +32,7 @@ database/openpowerlifting-2024-01-06-4c732975.csv
 
 Le code charge explicitement le fichier depuis le dossier database/ :
 
-```
+```python
 df = pd.read_csv(
     "database/openpowerlifting-2024-01-06-4c732975.csv",
     low_memory=False
@@ -99,6 +99,30 @@ Une interface **Streamlit** permet à l’utilisateur de :
 
 ---
 
+## Configuration de l’API Mistral
+
+L’accès à l’API Mistral nécessite la création d’un fichier **.env** à la racine du projet.
+
+### Étapes
+    1. Créer un fichier nommé .env
+    2. Y ajouter la clé API Mistral sous la forme suivante :
+```env
+MISTRAL_API_KEY="VOTRE_CLE_API_ICI"
+```
+⚠️ La clé fournie ci-dessus est un exemple.
+Le fichier .env ne doit pas être versionné (ajouté au .gitignore).
+
+Le code récupère automatiquement la clé via :
+```python
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
+```
+
+---
+
 ## Technologies utilisées
 
 - Python
@@ -120,8 +144,7 @@ Une interface **Streamlit** permet à l’utilisateur de :
 
 ## Auteur
 
-## Auteur
-
 [Floryan BORNET](https://github.com/BornetFloryan) 
 [Corentin BRENDLÉ](https://github.com/BrendleCorentin)
+
 
